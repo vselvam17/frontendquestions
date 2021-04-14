@@ -82,6 +82,11 @@ Instead, React DOM components expect DOM property names such as className and ht
        }    
     }
     
+    //Note:
+    //Note − Notice that we are using key = {idx} inside map() function. 
+    //This will help React to update only the necessary elements instead of re-rendering the entire list when something changes. 
+    //It is a huge performance boost for larger number of dynamically created elements.
+    
     class Header extends React.Component{
       render(){
         return(<div><h1>React Header</h1></div>)

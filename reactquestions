@@ -41,4 +41,22 @@ class Inline extends React.Component{
 
 export default Inline
 
-5. 
+5. How does the naming convention in JSX different from regular HTML?
+Since JSX is JavaScript, identifiers such as class and for are discouraged as XML attribute names. 
+Instead, React DOM components expect DOM property names such as className and htmlFor, respectively.
+
+6. How will you render the component on reactJS?
+
+  Sample code example
+
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import App from './App.jsx';
+  
+  ReactDOM.render(<App/>,document.getElementById('app'));
+
+7. What do you mean by Stateless/Presentation Components?
+   React components which presents the layout and no functional changes happening within the component
+   let's say state changes or others or also called stateless components
+   
+8. 

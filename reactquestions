@@ -1,0 +1,4 @@
+1. How many ways you can create a react application?
+You can create in 2 ways.
+1. Using the webpack and babel
+2. using the CLI npx create-react-app react-app

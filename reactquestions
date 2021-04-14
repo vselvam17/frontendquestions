@@ -1,4 +1,44 @@
 1. How many ways you can create a react application?
-You can create in 2 ways.
-1. Using the webpack and babel
-2. using the CLI npx create-react-app react-app
+  You can create in 2 ways.
+  1. Using the webpack and babel
+  2. using the CLI npx create-react-app react-app
+2. Why are we using JSX in the react application? (Javascript Syntax Extension)
+  It is recommended which has following benefits
+  1. It's faster because it performs optimization while compiling code to javascript
+  2. It's type-safe meaning most of the errors can be caught during compilation
+  3. It's easier and faster to write templates
+
+Sample App.jsx
+
+import React, { Component } from 'react';
+
+class App extends React.Component{
+  render(){
+    return (
+      <div>Hello World</div>
+    )
+  }
+}
+
+3. How to add custom attributes in reactJS?
+
+  You need to prefix it with data-
+  <p data-myattribute="somevalue">This is the content</p>
+  
+4. How do you add inline styles in reactJS
+
+class Inline extends React.Component{
+  render(){  
+    var myStyles = {
+      fontSize: 50,
+      color: '#FF0000'
+    }
+    return (
+        <div style={myStyles}></div>    
+    )
+  }
+}
+
+export default Inline
+
+5. 

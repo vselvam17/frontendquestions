@@ -59,4 +59,44 @@ Instead, React DOM components expect DOM property names such as className and ht
    React components which presents the layout and no functional changes happening within the component
    let's say state changes or others or also called stateless components
    
-8. 
+8. What do you mean by Stateful Components?
+
+    import React, { Component } from 'react';
+    
+    class App extends React.Component{
+    
+        constructor(props){
+          super(props);
+          this.state = {
+            names:[ {id:1,name:vinoth},
+                    {id:2,name:selvam}];          
+          }
+        }
+    
+       render(){
+          return(
+            <div>
+              <Header/>
+              {this.state.names.map((item,idx) => <Tablerow key={idx} data={item}/>)}
+            </div>);
+       }    
+    }
+    
+    class Header extends React.Component{
+      render(){
+        return(<div><h1>React Header</h1></div>)
+      }      
+    }
+    
+    class Tablerow extends React.Component{
+      render(){
+        return( <div>
+          <span>{this.props.data.id}</span>
+          <span>{this.props.data.name}</span>                
+        </div>);
+      }
+    }
+    
+    export default App;
+    
+   //ReactDOM.render(<App/>,document.getElementById("app"));

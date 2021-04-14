@@ -105,3 +105,43 @@ Instead, React DOM components expect DOM property names such as className and ht
     export default App;
     
    //ReactDOM.render(<App/>,document.getElementById("app"));
+   
+   9. Difference between the state and props
+   
+   State --> 1. Data is mutable thats why we should place the state in a container component which are subjected to updates and changes.
+   Props --> 1. Data is immutable, data is just passed as props from parent to child component
+   
+   When we need immutable data in our component, we just need to add props to ReactDOM.render() function in main.js
+   and use it inside our component.
+   
+   ----App.jsx----
+   
+   import React from 'react';
+
+    class App extends React.Component {
+       render() {
+          return (
+             <div>
+                <h1>{this.props.headerProp}</h1>
+                <h2>{this.props.contentProp}</h2>
+             </div>
+          );
+       }
+    }
+    export default App;
+    
+    ----main.js-----
+    
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './App.jsx';
+
+    ReactDOM.render(<App headerProp = "Header from props..." contentProp = "Content
+       from props..."/>, document.getElementById('app'));
+
+    export default App;
+    
+    
+
+
+
